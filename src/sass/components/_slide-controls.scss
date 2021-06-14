@@ -1,0 +1,80 @@
+// -----------------------------------------------------------------------------
+//! Progress
+// -----------------------------------------------------------------------------
+
+.slide-progress {
+	display: flex;
+	align-items: center;
+}
+
+.slide-progress-bar {
+	position: relative;
+	background: #fff;
+	height: 4px;
+	overflow: hidden;
+	&:before {
+		content: '';
+		position: absolute;
+		width:100%;
+		top: 0;
+		bottom: 0;
+		right: 100%;
+		background: rgba( $green, .75 );
+		animation-name: progressBar;
+		animation-duration: 5s; 
+		animation-iteration-count: 1;
+		animation-timing-function: linear;
+		animation-fill-mode: forwards;
+	}
+}
+
+@keyframes progressBar {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+
+.slide-progress-current,
+.slide-progress-last {
+	font-weight: bold;
+	font-size: 13px;
+	line-height: 16px;
+	color: #fff;
+	letter-spacing: -0.24px;
+}
+
+.slide-progress-current {
+	padding-right: 14px;
+}
+
+.slide-progress-last {
+	padding-left: 14px;
+}
+
+// -----------------------------------------------------------------------------
+//! Arrows
+// -----------------------------------------------------------------------------
+
+.btn-left,
+.btn-right {
+	width: 43px;
+	height: 43px;
+	background: #fff;
+	border-radius: 50%;
+	-webkit-appearance: none;
+	cursor: pointer;
+	border: none;
+	&:focus {
+		outline: none;
+	}
+	svg {
+		color: $blue;
+	}
+}
+
+.btn-left svg {
+	transform: rotate(180deg);
+}
+
+.btn-left + .btn-right {
+	margin-left: 11px;
+}

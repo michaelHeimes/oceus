@@ -1,0 +1,42 @@
+$bp-leader-stack: 660px;
+
+.leader-grid {
+	margin:32px 0 0 0;
+}
+
+.leader-block {
+	margin:0 0 40px 0;
+	
+}
+
+.leader-image {
+	
+	margin:0 0 32px 0;
+	@include respond($bp-leader-stack) {
+		margin:0 40px 0 0;	
+		float:left;
+	}
+}
+
+.leader-block-right {
+	width:100%;
+	max-width: 940px;
+}
+
+.leader-name {
+	font-size:1.5em;
+	line-height: 1.3333333333;
+	margin:0 0 8px 0;
+}
+
+.leader-title {
+	font-size:1em;
+	line-height: 1.5;
+	margin:0 0 24px 0;
+}
+
+.leader-text {
+	font-size: 1em;
+	line-height: 1.6;
+	margin:0;
+}

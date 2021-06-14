@@ -1,0 +1,195 @@
+
+// -----------------------------------------------------------------------------
+//! Form Wrapper
+// -----------------------------------------------------------------------------
+
+.gform_wrapper {
+	max-width: 714px;
+	// margin: auto;
+
+	form {
+		margin-left: -12px;
+		margin-right: -12px;
+	}
+}
+
+
+// -----------------------------------------------------------------------------
+//! Fields wrapper
+// -----------------------------------------------------------------------------
+
+.gform_fields,
+.post-content .gform_fields {
+	@include list-reset();
+	display: flex;
+	flex-wrap: wrap;
+
+	.gfield:before {
+		display: none;
+	}
+}
+
+.post-content .gfield {
+	margin-top: 0;
+}
+
+
+// -----------------------------------------------------------------------------
+//! Field
+// -----------------------------------------------------------------------------
+
+.gfield {
+	flex: 1 0 100%;
+	padding: 0 12px 24px;
+	position: relative;
+
+    &.pad-top {
+        @include respond( $md ) {
+            margin-top: 10px;
+        }
+    }
+}
+
+.gfield.gf-md-2s {
+	@include respond( $md ) {
+		flex: 0 0 50%;
+	}
+}
+
+.gfield.gf-lg-2s {
+	@include respond( $lg ) {
+		flex: 0 0 50%;
+	}
+}
+
+.gfield.gf-lg-3s {
+	@include respond( $lg ) {
+		flex: 0 0 33.3333%;
+	}
+}
+
+
+// -----------------------------------------------------------------------------
+//! Label
+// -----------------------------------------------------------------------------
+
+.gfield_label {
+	color: $brown;
+	display: block;
+	margin-bottom: 6px;
+	font-size: 13px;
+	line-height: 18px;
+	font-weight: 700;
+    letter-spacing: -.24px;
+}
+
+.gfield_required {
+    color: $blue;
+    margin-left: 3px;
+}
+//
+// .is-active .gfield_label {
+// 	color: $blue;
+// }
+
+
+// -----------------------------------------------------------------------------
+//! Input states
+// -----------------------------------------------------------------------------
+
+.is-active input,
+.is-active textarea {
+	border-color: $blue;
+	// box-shadow: 0 2px 6px 0 rgba(44,112,181,0.25);
+}
+
+.gfield_error input,
+.gfield_error textarea {
+	border-color: $red;
+	// box-shadow: 0 2px 6px 0 rgba(219,80,74,0.25);
+}
+
+
+// -----------------------------------------------------------------------------
+//! Checkboxes
+// -----------------------------------------------------------------------------
+
+// .gfield_checkbox,
+// .post-content .gfield_checkbox {
+// 	@include list-reset();
+//
+// 	li {
+// 		margin: 5px 0;
+//
+// 		&:before {
+// 			display: none;
+// 		}
+// 	}
+// }
+
+
+
+// .checkbox-two-column .gfield_checkbox {
+//
+//     @include respond( $md ) {
+//         display: flex;
+//         flex-wrap: wrap;
+//         margin: -5px -16px 0;
+//
+//         li {
+//     		flex: 0 0 50%;
+//     		padding-right: 16px;
+//             padding-left: 16px;
+//         }
+//     }
+// }
+
+
+// -----------------------------------------------------------------------------
+//! Submit
+// -----------------------------------------------------------------------------
+
+.gform_footer {
+	padding: 0 12px;
+
+    input[type=submit] {
+        min-width: 150px;
+    }
+    //
+	// @include respond( $md ) {
+	// 	padding-top: 44px;
+	// }
+}
+
+// -----------------------------------------------------------------------------
+//! Honeypot
+// -----------------------------------------------------------------------------
+
+.gform_validation_container {
+	display: none;
+}
+// -----------------------------------------------------------------------------
+//! Validation
+// -----------------------------------------------------------------------------
+
+.validation_error {
+	display: none;
+}
+
+
+.gfield_description.validation_message,
+.instruction.validation_message {
+	font-size:13px;
+	line-height: 16px;
+	color: $red;
+	margin-top:4px;
+}
+// .validation_message {
+// 	position: absolute;
+// 	right: 12px;
+// 	padding-top: 6px;
+// 	color: $red;
+// 	font-weight: 500;
+// 	font-size: 10px;
+//     line-height: 11px;
+// }

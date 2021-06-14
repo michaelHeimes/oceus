@@ -1,0 +1,48 @@
+
+
+.masthead {
+	padding: 20px $pad-mobile;
+
+	@include respond( $md ) {
+		padding: 20px $pad-desktop;
+	}
+}
+
+.masthead .contain {
+	display: flex;
+	align-items: center;
+    justify-content: space-between;
+}
+
+
+// -----------------------------------------------------------------------------
+//! Logo
+// -----------------------------------------------------------------------------
+
+.masthead .logo {
+	display: inline-block;
+	height: 35px;
+    flex: 0 0 auto;
+	-ms-flex: 0 1 auto;
+	border: none;
+	img {
+		border: none;
+		display: block;
+		max-height: 100%;
+	}
+
+	@include respond( $md ) {
+		height: 44px;
+	}
+
+    @include respond( $desktop ) {
+        margin-top: auto;
+    }
+}
+
+
+.header-right {
+	-ms-flex: 0 1 auto;
+	max-width: 1060px;
+	flex: 1 1 100%;
+}

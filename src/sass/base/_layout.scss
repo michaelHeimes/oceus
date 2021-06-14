@@ -1,0 +1,223 @@
+// -----------------------------------------------------------------------------
+//! Mixins
+// -----------------------------------------------------------------------------
+
+@mixin gutter( $pixels ) {
+	$px: ($pixels / 2 );
+
+	margin-left: -$px;
+    margin-right: -$px;
+
+    > * {
+        padding-left: $px;
+        padding-right: $px;
+    }
+}
+
+@mixin v-gutter( $pixels ) {
+	> * {
+		margin-top: $pixels;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+@mixin symmetrical-layout( $breakpoint, $units ) {
+	$basis: (100 / $units * 1%);
+	$n: ($units + 1);
+
+	> * {
+		margin-top: 16px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	@include respond( $breakpoint ) {
+		display: flex;
+		flex-wrap: wrap;
+
+		> * {
+			flex: 0 1 $basis;
+			max-width: $basis;
+			margin-top: 0;
+		}
+
+        > *:nth-of-type( -n + #{$n} ) {
+			margin-top: 0;
+		}
+
+		> *:nth-of-type( n + #{$n} ) {
+			margin-top: 16px;
+		}
+	}
+}
+
+
+// -----------------------------------------------------------------------------
+//! Symmetrical layouts
+// -----------------------------------------------------------------------------
+
+.md-2s {
+	@include symmetrical-layout( $md, 2 );
+}
+
+.md-3s {
+	@include symmetrical-layout( $md, 3 );
+}
+
+.lg-2s {
+	@include symmetrical-layout( $lg, 2 );
+}
+
+.lg-3s {
+	@include symmetrical-layout( $md, 3 );
+}
+
+.lg-4s {
+	@include symmetrical-layout( $lg, 4 );
+}
+
+
+// -----------------------------------------------------------------------------
+//! Gutters
+// -----------------------------------------------------------------------------
+
+.gutter {
+	@include gutter( 20px );
+}
+
+.gutter-25 {
+	@include gutter( 25px );
+}
+
+.gutter-30 {
+	@include gutter( 30px );
+}
+
+.gutter-45 {
+	@include gutter( 45px );
+}
+
+.gutter-50 {
+	@include gutter( 50px );
+}
+
+
+// -----------------------------------------------------------------------------
+//! Flexbox
+// -----------------------------------------------------------------------------
+
+.flex {
+    display: flex;
+    align-items: center;
+    -ms-flex: 0 1 auto;
+}
+
+.flex-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-stretch {
+    display: flex;
+    align-items: stretch;
+}
+
+.flex-top {
+    display: flex;
+    align-items: flex-start;
+}
+
+.align-top {
+    align-self: flex-start;
+}
+
+.align-left {
+    margin-right: auto;
+}
+
+.align-right {
+    margin-left: auto;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+// -----------------------------------------------------------------------------
+//! Text alignment
+// -----------------------------------------------------------------------------
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+// -----------------------------------------------------------------------------
+//! Margins
+// -----------------------------------------------------------------------------
+
+.margin-x {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.margin-y {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.margin-top {
+    margin-top: 1rem;
+}
+
+.margin-bot {
+    margin-bottom: 1rem;
+}
+
+
+// -----------------------------------------------------------------------------
+//! Flat
+// -----------------------------------------------------------------------------
+
+.flat-top {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.flat-bot {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.flat-x {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.flat-y {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}

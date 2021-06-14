@@ -1,0 +1,26 @@
+.btn,
+.gform_button {
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+	text-align: center;
+	-webkit-appearance: none;
+    padding: 7px 26px;
+	border: 0;
+    background-image: linear-gradient(180deg, #007DB8 0%, #056B9C 100%);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26);
+    border-radius: 4px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+	&:hover,
+	&:focus {
+		outline: 0;
+        text-decoration: none;
+        background: linear-gradient(180deg, #056B9C 0%, #056B9C 100%);
+	}
+}

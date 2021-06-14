@@ -1,0 +1,45 @@
+.hero {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 80px 16px;
+	background-color: $blue;
+	@include respond( $md ) {
+		padding: 160px 32px;
+	}
+	.contain {
+		flex: 0 0 100%;
+		width: 100%;
+		-ms-flex: 0 1 auto;
+	}
+}
+
+
+.hero-title {
+	color:#fff;
+	font-size:2.5em;
+	line-height: 1.2;
+	letter-spacing: -1px;
+	@include respond( $md ) {
+		font-size:3.375em;
+		line-height: 1.1111111111;
+	}
+}
+
+.contain > h2.hero-subtitle {
+	margin:16px 0 0 0;	
+	font-weight: normal;
+	color:#fff;
+	letter-spacing: 0;
+	font-size: 1.125em;
+	line-height: 1.7777777778;
+	max-width: 608px;
+	@include respond( $md ) {
+		margin:32px 0 0 0;
+		font-size: 1.5em;
+		line-height: 1.5833333333;	
+	}
+}

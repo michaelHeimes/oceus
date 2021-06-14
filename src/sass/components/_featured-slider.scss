@@ -1,0 +1,179 @@
+$bp-fslide-lg: 860px;
+
+.featured-slider {
+	background-image: linear-gradient(-87deg, #173753 0%, #172633 64%, #17120E 100%);
+	position: relative;
+	.slick-track{
+		display: flex;
+		.slick-slide {
+			height: auto;
+			> div {
+				height: 100%;
+			}
+		}
+	}
+}
+
+
+// -----------------------------------------------------------------------------
+//! Slide
+// -----------------------------------------------------------------------------
+
+.featured-slider .slide {
+    padding: 40px 0 0 32px;
+    border-radius: 4px;
+	
+    @include respond( $md ) {
+        padding: 40px 0 0 20px;
+    }
+    @include respond($bp-fslide-lg) {
+	    padding: 50px 0 0 60px;
+    }
+}
+
+.featured-slider .slide-wrap {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	justify-content: space-between;
+	@include respond($md) {
+		justify-content: flex-start;	
+		flex-direction: row;	
+	}
+}
+
+
+// -----------------------------------------------------------------------------
+//! Slide content
+// -----------------------------------------------------------------------------
+
+
+.featured-slider .slick-dots {
+	position: absolute;
+	top:20px;
+	left:32px;
+	list-style: none;
+	padding:0;
+	margin:0;
+	width:calc(100% - 64px);
+	max-width:358px;
+	display: flex;
+	align-items: stretch;
+	justify-content: flex-start;
+	@include respond($md) {
+		left:20px;
+	}
+	@include respond($bp-fslide-lg) {
+		left:60px;
+		bottom:40px;
+		top:auto;
+	}
+	li {
+		width:100%;
+		margin:0 10px 0 0;
+		-ms-flex: 0 1 auto;
+		flex: 1 1 auto;
+		&:only-child {
+	        display: none;
+	    }
+		button {
+			font-size: 0;
+		    line-height: 0;
+		    display: block;
+		    width: 100%;
+		    height: 4px;
+		    padding: 0;
+		    cursor: pointer;
+		    color: transparent;
+		    border: 0;
+		    outline: none;
+		    background: #fff;
+		    overflow: hidden;
+		    position: relative;
+		    &:before {
+				content: '';
+				position: absolute;
+				width:100%;
+				top: 0;
+				bottom: 0;
+				right: 100%;
+				background: rgba( $green, .75 );
+			}			
+		}
+		&.slick-active button:before {
+			animation-name: progressFeature;
+			animation-duration: 5s; 
+			animation-iteration-count: 1;
+			animation-timing-function: linear;
+			animation-fill-mode: forwards;
+		}
+	}
+}
+
+@keyframes progressFeature {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+
+.featured-slider .slide-content {
+    padding-right:32px;
+    padding-bottom:40px;
+    -ms-flex: 0 1 auto;
+    @include respond($md) {
+		max-width: 358px;  
+		padding-right:0;  
+    }
+    @include respond($bp-fslide-lg) {
+		padding-bottom:84px;   
+	}
+   
+}
+
+.featured-slider .slide-image {
+	-ms-flex: 0 1 auto;
+	img {
+		display: block;
+	}
+	@include respond($md) {
+		padding:0 0 0 90px;
+		align-self: flex-end;
+	}
+}
+
+.featured-slider p {
+    color: #fff;
+    line-height: 1.65;
+
+    @include respond( $md ) {
+        font-size: 22px;
+    }
+}
+
+.featured-slider h3 {
+    font-size: 32px;
+    color: #fff;
+    line-height: 1.3;
+    font-weight: 300;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+
+    @include respond( $md ) {
+        font-size: 40px;
+    }
+
+    strong {
+        font-weight: 600;
+    }
+
+    sup {
+        font-size: 14px;
+    }
+
+    + p {
+        margin-top: 18px;
+    }
+}
+
+.featured-slider p + .btn {
+    margin-top: 22px;
+}

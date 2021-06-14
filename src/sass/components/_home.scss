@@ -1,0 +1,15 @@
+.home .callout .callout-body {
+    @include respond( $lg ) {
+        max-width: 456px;
+
+        p {
+            padding-right: 40px;
+        }
+    }
+}
+
+
+.home-about-cta {
+	margin-top:32px;
+	font-weight: bold;
+}

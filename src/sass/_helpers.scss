@@ -1,0 +1,152 @@
+// -----------------------------------------------------------------------------
+//! Media queries
+// -----------------------------------------------------------------------------
+
+	@mixin min( $breakpoint ) {
+		@media print, screen and ( min-width: $breakpoint ) {
+			@content;
+		}
+	}
+
+	@mixin max( $breakpoint ) {
+		$breakpoint: $breakpoint - 1;
+		@media screen and ( max-width: $breakpoint ) {
+			@content;
+		}
+	}
+
+	@mixin range( $start, $end ) {
+		$end: $end - 1;
+		@media screen and ( min-width: $start ) and ( max-width: $end ) {
+			@content;
+		}
+	}
+
+@mixin respond($breakpoint, $operator: "up", $dimension: 'width') {
+		
+		@if $operator == "up"
+		{
+			@media print, screen and ( min-#{ $dimension }: $breakpoint) { 
+				@content; 
+			}
+		} @else if $operator == "down" {
+			@if unit( $breakpoint ) == "px" {
+				$breakpoint: $breakpoint - 1;
+			}
+			@media screen and (max-#{ $dimension }: $breakpoint) { 
+				@content; 
+			}
+		} @else  {
+			@if unit( $operator ) == "px" {
+				$operator: $operator - 1;
+			}
+			@media screen and (min-#{ $dimension }: $breakpoint) and (max-#{ $dimension }: $operator) {
+				@content; 
+			}
+		}
+		
+	}
+// -----------------------------------------------------------------------------
+//! Psuedo-element line
+// -----------------------------------------------------------------------------
+
+	@mixin line( $width: 1px, $height: 100%, $color: black ) {
+		content: "";
+		position: absolute;
+		width: $width;
+		height: $height;
+		background: $color;
+	}
+
+
+// -----------------------------------------------------------------------------
+//! List reset
+// -----------------------------------------------------------------------------
+
+	@mixin list-reset() {
+		list-style-type: none;
+		margin: 0;
+		padding-left: 0;
+	}
+
+
+// -----------------------------------------------------------------------------
+//! Z-index
+// -----------------------------------------------------------------------------
+
+@function z($layer) {
+	$z-layers: (
+		"god": 9001,
+		"modal": 100,
+		"backdrop": 90,
+		"strong": 10,
+		"weak": 5,
+		"default": 1,
+		"low": -1,
+		"hell": -9000
+	);
+
+	@if not map-has-key($z-layers, $layer) {
+		@warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+	}
+
+	@return map-get($z-layers, $layer);
+}
+
+
+// -----------------------------------------------------------------------------
+//! Visibility
+// -----------------------------------------------------------------------------
+
+.hide-md {
+	@include min( $md ) {
+		display: none !important;
+	}
+}
+
+.show-md {
+	@include respond( $md, "down" ) {
+		display: none !important;
+	}
+}
+
+.hide-lg {
+	@include min( $lg ) {
+		display: none !important;
+	}
+}
+
+.show-lg {
+	@include respond( $lg, "down" ) {
+		display: none !important;
+	}
+}
+
+.is-hidden {
+    display: none !important;
+}
+
+// -----------------------------------------------------------------------------
+//! Padding
+// -----------------------------------------------------------------------------
+
+.flat-top {
+    padding-top: 0 !important;
+}
+
+.flat-bot {
+    padding-bottom: 0 !important;
+}
+
+.flat-y {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+// -----------------------------------------------------------------------------
+//! Colors
+// -----------------------------------------------------------------------------
+
+.bg-sand {
+    background-color: $sand;
+}

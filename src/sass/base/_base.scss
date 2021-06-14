@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+	min-width: 320px;
+	overflow-x: hidden;
+	-webkit-text-size-adjust: 100%;
+    font-family: 'Open Sans', Arial, Helvetica, Sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+}
+
+img {
+	max-width: 100%;
+}
+
+
+// -----------------------------------------------------------------------------
+//! Margins
+// -----------------------------------------------------------------------------
+
+*:first-child {
+    margin-top: 0;
+}
+
+*:last-child {
+    margin-bottom: 0;
+}
+
+
+// -----------------------------------------------------------------------------
+//! Sections
+// -----------------------------------------------------------------------------
+
+section {
+	padding: 2em 1em;
+
+	@include respond( $md ) {
+		padding: 4.5em 2em;
+	}
+}
+
+.contain {
+	position: relative;
+	max-width: $content-width;
+	margin-left: auto;
+    margin-right: auto;
+
+    &.narrow {
+        max-width: $content-width-narrow;
+    }
+
+    &.wide {
+        max-width: $content-width-wide;
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+//! Headings
+// -----------------------------------------------------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    -webkit-font-smoothing: antialiased;
+    -mos-osx-font-smoothing: grayscale;
+    margin: 0;
+}
+
+h2 {
+    color: $brown;
+    font-weight: 600;
+    font-size:24px;
+    line-height: 1.3333333333;
+    letter-spacing: -1px;
+
+    @include respond($md) {
+		font-size: 32px;
+		line-height: 1.25;  
+		 
+    }
+    @include respond($lg) {
+		font-size: 40px;  
+		line-height: 1.4; 
+    }
+}
+
+.contain > h2 {
+    margin-bottom: 2rem;
+
+    @include respond( $md ) {
+        margin-bottom: 42px;
+    }
+    &.small-margin {
+	   margin-bottom:24px; 
+    }
+}
+
+h3 {
+    color: $blue;
+    font-weight: 700;
+    font-size: 1.25em;
+    line-height: 1.2;
+    letter-spacing: -0.48px;
+    
+     @include respond($md) {
+		font-size: 1.5em;
+		line-height: 1.25;  
+		 
+    }
+    @include respond($lg) {
+    		font-size: 1.625;
+		line-height: 1.1538461538; 
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+//! Paragraphs
+// -----------------------------------------------------------------------------
+
+p {
+	margin: 14px 0;
+    color: $text;
+	font-size: 16px;
+	line-height: 1.67;
+    -webkit-font-smoothing: antialiased;
+	-mos-osx-font-smoothing: grayscale;
+
+	@include respond( $md ) {
+        font-size: 18px;
+	}
+}
+
+
+// -----------------------------------------------------------------------------
+//! Lists
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+//! Links
+// -----------------------------------------------------------------------------
+
+a {
+	transition: all 0.2s ease;
+    color: $blue;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+//! Blockquotes
+// -----------------------------------------------------------------------------
+
+	
+	blockquote {
+		text-align: left;
+		color: $text;
+		font-weight: 400;
+		margin:2.5em 0;
+		padding:2em 2em 1em 2em;
+		background:$gray;
+		p {
+			line-height:1.6666666667 !important;
+			font-size: 1.5em !important;
+			margin:0;
+		}
+	}
+
+// -----------------------------------------------------------------
+//! Media Styles
+// -----------------------------------------------------------------
+
+img {
+	max-width: 100%;
+	height:auto;
+}
+.wp-caption {
+	max-width: 100%;
+	height:auto;
+}
+
+.wp-caption-text {
+	padding:0;
+	margin:0;
+	display: block;
+	font-size:13px;
+	font-weight: bold;
+	color: lighten($text,25%);	
+	line-height: 1.25;
+	a {
+		font-family: inherit;
+		font-style: inherit;
+		font-weight: inherit;
+	}
+}
+
+.alignleft { 
+	float: left; 
+	margin: 0.5em 1em 0.5em 0; 
+}
+
+.alignright { 
+	float: right; 
+	margin: 0.5em 0 0.5em 1em; 
+}
+
+.aligncenter { 
+	margin: 1em auto; 
+	display: block;
+}
+
+.alignleft,
+.alignright {
+	max-width: 50%;
+}

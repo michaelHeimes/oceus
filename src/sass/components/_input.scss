@@ -1,0 +1,74 @@
+
+// -----------------------------------------------------------------------------
+//! Text
+// -----------------------------------------------------------------------------
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=search],
+textarea {
+	width: 100%;
+	height: 46px;
+	padding: 13px 13px 11px;
+	font-size: 16px;
+	line-height: 19px;
+	border: 1px solid rgba( #636366, .29 );
+	border-radius: 4px;
+	box-shadow: none;
+	-webkit-appearance: none;
+
+
+	&:hover,
+	&:focus {
+		outline: 0;
+	}
+
+    &:focus {
+        border-color: $blue;
+    }
+}
+
+textarea {
+	height:138px;
+}
+
+// -----------------------------------------------------------------------------
+//! Radio / Checkbox
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+//! Dropdown
+// -----------------------------------------------------------------------------
+
+
+select {
+	width: 100%;
+	height: 46px;
+	padding: 13px 13px 11px;
+	font-size: 16px;
+	line-height: 19px;
+	border: 1px solid rgba( #636366, .29 );
+	border-radius: 4px;
+	box-shadow: none;
+	
+	-webkit-appearance: none;
+	background-image:url(../img/arrow-down.svg);
+	background-repeat: no-repeat;
+	background-position: right 16px center;
+	background-color:#fff;
+	@include respond( $lg ) {
+		max-width: 330px;	
+	}
+
+	&:hover,
+	&:focus {
+		outline: 0;
+	}
+
+    &:focus {
+        border-color: $blue;
+    }
+
+}

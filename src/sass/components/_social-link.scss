@@ -1,0 +1,14 @@
+.social-link {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba( $brown, .15 );
+    color: $brown;
+
+    &:hover {
+        color: $blue;
+    }
+}

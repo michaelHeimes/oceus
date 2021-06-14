@@ -1,0 +1,58 @@
+// -----------------------------------------------------------------------------
+//! Locations
+// -----------------------------------------------------------------------------
+
+section.contact-locations {
+    .contain {
+        @include respond( $lg ) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+.contact-locations-heading {
+    flex: 0 1 363px;
+}
+
+.contact-locations-body {
+    flex: 0 1 810px;
+    padding-top: 30px;
+
+    @include respond( $lg ) {
+        padding-left: 30px;
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+//! Form
+// -----------------------------------------------------------------------------
+
+section.contact-form {
+    padding-top: 0;
+
+    .contain {
+        border-top: 1px solid rgba( #636366, .17 );
+        padding-top: 50px;
+
+        @include respond( $lg ) {
+            padding-top: 76px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .gform_wrapper {
+        flex: 0 1 744px;
+        padding-top: 30px;
+
+        @include respond( $lg ) {
+            padding-left: 30px;
+        }
+    }
+
+    .contact-form-copy {
+        flex: 0 1 363px;
+    }
+}

@@ -1,0 +1,123 @@
+// -----------------------------------------------------------------------------
+//! Embeds
+// -----------------------------------------------------------------------------
+
+.embed-wrap {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+// -----------------------------------------------------------------------------
+//! Margins
+// -----------------------------------------------------------------------------
+
+.wysi {
+    p + h1,
+    p + h2,
+    p + h3 {
+        margin-top: 53px;
+    }
+
+    ul:not(:first-child) {
+        margin-top: 36px;
+    }
+    
+    .contain {
+	    max-width: 780px;
+	    flex: 780px 1 1;
+	    -ms-flex: 0 1 auto;
+    }
+}
+
+.contain > h2.single-title {
+	margin-bottom:24px;
+}
+
+.wysi .blog-meta {
+	margin-bottom:32px;
+}
+
+.wysi.has-callout {
+
+	@include respond(1000px) {
+			display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		max-width: 1244px;
+		margin:0 auto;
+	}
+	
+}
+
+// -----------------------------------------------------------------------------
+//! Sidebar Callout
+// -----------------------------------------------------------------------------
+
+.sidebar {
+	max-width: 780px;
+	margin:80px auto 0 auto;
+	@include respond(1000px) {
+		max-width: 360px;
+		flex: 360px 0 0;
+		-ms-flex: 0 1 auto;
+		margin-left:64px;	
+	}
+	.block-link:before {
+		 background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(52,43,39,1) 100%);
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(52,43,39,1) 100%);
+	background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(52,43,39,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#342b27',GradientType=0 );
+	}
+	.block-link:hover:before {
+		  background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(52,43,39,1) 100%);
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(52,43,39,1) 100%);
+	background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(52,43,39,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#342b27',GradientType=0 );
+	}
+}
+
+// -----------------------------------------------------------------------------
+//! Lists
+// -----------------------------------------------------------------------------
+
+.wysi ul,
+.wysi ol {
+    padding-left: 19px;
+    font-size: 16px;
+	li {
+		color: $text;
+		font-size: 1.125em;
+		line-height: 1.6666666667;
+		margin:0 0 15px 0;
+		padding-left:24px;
+	}
+}
+
+.wysi ul li {
+	position: relative;
+	list-style: none;	
+	&:before {
+		content:"";
+		position: absolute;
+		width:6px;
+		height:6px;
+		border-radius: 50%;
+		background: $lightgreen;
+		top:12px;
+		left:0;
+	}
+}
+
+
+
+

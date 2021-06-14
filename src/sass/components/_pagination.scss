@@ -1,0 +1,106 @@
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@include respond(740px, "down") {
+		justify-content: space-between;	
+	}
+}
+
+.pagination-block {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.pagination-button {
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: 600;
+	margin:0 10px;
+	svg {
+		display: inline-block;
+		margin-left:8px;
+		margin-right:8px;
+		position: relative;
+		top:-1px;
+	}
+	
+}
+
+a.pagination-button {
+	color: $blue;
+	
+	svg path {
+		fill: $blue;
+		transition: fill 0.2s ease;
+	}
+	&:hover {
+		color: $green;
+		text-decoration: none;
+		svg * {
+			fill: $green;
+		}
+	}
+}
+
+span.pagination-button {
+	cursor: not-allowed;
+	color:rgba(114,114,117,0.5);
+	
+	svg path {
+		fill: rgba(114,114,117,0.5);
+	}
+}
+
+
+.pagination-numbers a,
+.pagination-numbers span,
+.last-page,
+.first-page {
+	width:46px;
+	height:46px;
+	border-radius: 4px;
+	text-align: center;
+	line-height: 46px;
+	font-size:18px;
+	font-weight: bold;
+	display: block;
+	margin:0 10px;
+
+}
+
+.pagination-numbers span.current {
+	color:#fff;
+	background-image: linear-gradient(180deg, #007DB8 0%, #056B9C 100%);
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26);
+}
+
+.pagination-numbers a,
+.last-page,
+.first-page {
+	border:1px solid rgba(99,99,102,0.29);
+	background:#fff;
+	color: $text;
+	&:hover {
+		text-decoration: none;
+		border-color: $blue;
+		color: $blue;
+	}
+}
+
+.pagination-ellipses {
+	font-weight: bold;
+	font-size:18px;
+	padding:0 5px;
+	color:$text;
+}
+
+
+.pagination-numbers,
+.pagination-ellipses,
+.jump-number {
+	@include respond(740px, "down") {
+		display: none;
+	}
+}

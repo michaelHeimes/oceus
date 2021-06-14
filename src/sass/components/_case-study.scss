@@ -1,0 +1,70 @@
+.caseStudy {
+	padding:40px 32px;
+	@include respond($md) {
+		padding:136px 32px;
+	}
+}
+
+
+.cs-box {
+	@include respond($md) {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+}
+
+.cs-left {
+	max-width: 590px;
+	margin:0 auto;
+	@include respond($md) {
+		width: 50%;
+		flex: 0 0 50%;	
+		-ms-flex: 0 1 auto;
+	}
+}
+
+.cs-right {
+	max-width: 590px;
+	padding:24px 0 0 0;
+	margin:0 auto;
+	@include respond($md) {
+		padding:20px 0 0 24px;
+		width: 50%;
+		flex: 0 0 50%;	
+		-ms-flex: 0 1 auto;
+	}
+	@include respond($desktop) {
+		padding:20px 0 0 9%;	
+	}
+}
+
+.cs-right h2 {
+	margin:0;
+}
+
+.cs-right p {
+	margin:16px 0 0 0;
+	@include respond($md) {
+		margin:32px 0 0 0;
+	}
+}
+.cs-right .btn {
+	margin:32px 0 0 0;
+	@include respond($md) {
+		margin:56px 0 0 0;
+	}
+}
+
+
+.cs-left .block-link {
+	min-height: 0;
+	padding:0;
+	padding-top: (370 / 590) * 100%;
+	&:before {
+		display: none;
+	}
+	&:after {
+		background-color: #607744;
+	}
+}

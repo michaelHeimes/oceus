@@ -1,0 +1,317 @@
+$bp-action-margin: 920px;
+$bp-stack: 580px;
+
+.action-fade {
+	opacity: 0;
+	transform: translateY(40px);
+	transition: all 0.4s ease;
+	&.is-animated {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.action-title {
+	text-align: center;
+	margin:64px 0 16px 0;
+}
+
+.action-text {
+	margin:0 0 32px 0;
+	text-align: center;
+}
+.action-block {
+	position: relative;
+	counter-reset: poi-counter;
+	img {
+		display: block;
+		position: relative;
+		z-index: 1;
+	}
+	
+	@include respond($bp-action-margin) {
+		margin-left: -60px;
+		margin-right:-60px;	
+	}
+}
+
+
+.poi-mobile {
+	counter-reset: poi-counter;
+	@include respond($bp-stack) {
+		display: none;
+	}
+	.poi-dot {
+		animation: none;
+	}
+}
+
+.poi {
+	display: block;
+	position: absolute;
+	z-index: 2;
+	counter-increment: poi-counter;
+	transform: scale(0);
+	transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+
+.poi-desktop {
+	
+	@include respond($bp-stack, "down") {
+		position: static;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		margin:16px 0 0 0;
+		
+		.poi-dot {
+		//	display: none;
+			animation: none;
+			flex: 0 0 32px;
+		}
+		.poi-tooltip {
+			position: static;
+			opacity: 1;
+			text-align: left;
+			background: none;
+			box-shadow: none;
+			transform: none;
+			width: auto;
+			pointer-events: auto;
+			padding:0 0 0 8px;
+		}
+	}
+}
+
+
+.is-animated .poi-desktop {
+	@include respond($bp-stack, "down") {
+		transform: none;
+	}
+	@include respond($bp-stack) {
+		transform: scale(1);
+	}
+}
+
+.is-animated .poi-mobile .poi {
+	transform: scale(1);
+}
+
+.poi-dot {
+	width:32px;
+	height:32px;
+	background-color: rgba($red, 0.9);
+	border-radius: 50%;
+	position: relative;
+	display: block;
+	@include respond($bp-stack) {
+		cursor: help;
+		animation: shadow-pulse 2s infinite;
+		width:32px;
+		height:32px;
+	}
+	&:after {
+		content: counter(poi-counter);
+		color:#fff;
+		font-size:16px;
+		font-weight: bold;
+		line-height: 32px;
+		width:32px;
+		text-align: center;
+		position: absolute;
+		top:0;
+		left:0;
+		@include respond($bp-stack) {
+			content:"+";
+			font-size:20px;
+		}
+	}
+}
+
+.poi-tooltip {
+	position: absolute;
+	top:100%;
+	left:50%;
+	transform: translate(-50%, 0px);
+	width:200px;
+	padding:8px;
+	background:#fff;
+	font-size: 12px;
+	border-radius: 5px;
+	text-align: center;
+	box-shadow: 0 0 8px rgba(0,0,0,0.6);
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.2s ease;
+	color: $text;
+}
+
+.poi:hover .poi-tooltip {
+	opacity: 1;
+	pointer-events: auto;
+	
+}
+
+@keyframes shadow-pulse
+{
+     0% {
+          box-shadow: 0 0 0 0px rgba($red, 0.6);
+     }
+     50% {
+          box-shadow: 0 0 0 24px rgba($red, 0);
+     }
+     100% {
+          box-shadow: 0 0 0 24px rgba($red, 0);
+     }
+}
+
+.action-wrap {
+	img {
+		box-shadow: 0 0 8px rgba(0,0,0,0.1);
+	}
+	@include respond($bp-stack, "down") {
+		position: relative;
+	}
+	
+}
+
+
+//Positioning
+
+
+//A
+#poi-A-1,
+#poi-mobile-A-1 {
+	top:32%;
+	left:21%;
+	transition-delay: 0.6s;
+	@include respond($bp-stack, "down") {
+		left:15%;	
+	}
+}
+
+#poi-A-2,
+#poi-mobile-A-2 {
+	left:40%;
+	top:20%;
+	transition-delay: 0.8s;
+}
+
+#poi-A-3,
+#poi-mobile-A-3 {
+	right:30%;
+	top:40%;
+	transition-delay: 1s;
+}
+
+#poi-A-4,
+#poi-mobile-A-4 {
+	top:10%;
+	right:15%;
+	transition-delay: 1.2s;
+	@include respond($bp-stack, "down") {
+		right: 17%;
+	}
+}
+
+//B
+#poi-B-1,
+#poi-mobile-B-1 {
+	left:33%;
+	bottom:30%;
+	transition-delay: 0.6s;
+}
+
+#poi-B-2,
+#poi-mobile-B-2 {
+	right:42%;
+	top:30%;
+	transition-delay: 0.8s;
+}
+
+#poi-B-3,
+#poi-mobile-B-3 {
+	left:10%;
+	top:30%;
+	transition-delay: 1s;
+}
+
+#poi-B-4,
+#poi-mobile-B-4 {
+	bottom:10%;
+	right:15%;
+	transition-delay: 1.2s;
+}
+
+//C
+#poi-C-1,
+#poi-mobile-C-1 {
+	top:40%;
+	left:10%;
+	transition-delay: 0.6s;
+	
+}
+
+#poi-C-2,
+#poi-mobile-C-2 {
+	left:43%;
+	bottom:35%;
+	transition-delay: 0.8s;
+	
+}
+
+#poi-C-3,
+#poi-mobile-C-3 {
+	right:6%;
+	top:38%;
+	transition-delay: 1s;
+	
+}
+
+#poi-C-4,
+#poi-mobile-C-4 {
+	bottom:20%;
+	right:40%;
+	transition-delay: 1.2s;
+	
+}
+
+//D
+#poi-D-1,
+#poi-mobile-D-1 {
+	top:10%;
+	left:16%;
+	transition-delay: 0.6s;
+	
+}
+
+#poi-D-2,
+#poi-mobile-D-2 {
+	left:43%;
+	bottom:33%;
+	transition-delay: 0.8s;
+	
+}
+
+#poi-D-3,
+#poi-mobile-D-3 {
+	left:54%;
+	top:60%;
+	transition-delay: 1s;
+	
+}
+
+#poi-D-4,
+#poi-mobile-D-4 {
+	bottom:20%;
+	right:30%;
+	transition-delay: 1.2s;
+	
+}

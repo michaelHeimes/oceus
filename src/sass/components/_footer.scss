@@ -1,0 +1,196 @@
+
+.footer {
+	padding: 2rem 1rem;
+    background: $gray;
+
+	@include respond( $md ) {
+		padding: 2.5rem $pad-desktop 3rem;
+	}
+
+    @include respond( $desktop ) {
+        padding: 80px $pad-desktop 85px;
+    }
+
+    nav a:hover {
+        color: $blue;
+        text-decoration: none;
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+//! Main
+// -----------------------------------------------------------------------------
+
+.footer main {
+    margin-bottom: 3rem;
+
+    @include respond( $desktop ) {
+        margin-bottom: 78px;
+    }
+}
+
+.footer-col {
+	width:100%;
+    flex: 1 0 100%;
+	-ms-flex: 0 1 auto;
+    @include respond( 400px ) {
+	    width:50%;
+        flex: 1 0 50%;
+        -ms-flex: 0 1 auto;
+    }
+
+    @include respond( $md ) {
+	    width:33%;
+        flex: 0 0 33%;
+         -ms-flex: 0 1 auto;
+    }
+
+    @include respond( $lg ) {
+	    width:20%;
+        flex: 0 0 20%;
+         -ms-flex: 0 1 auto;
+    }
+}
+
+ @include respond( 400px, "down" ) {
+    .footer-col:nth-of-type(n+2) {
+        margin-top: 1.5rem;
+    }
+}
+
+ @include respond( $md, "down" ) {
+    .footer-col:nth-of-type(n+3) {
+        margin-top: 1.5rem;
+    }
+}
+
+ @include respond($lg, "down" ) {
+    .footer-col:nth-of-type(n+4) {
+        margin-top: 1.5rem;
+    }
+}
+
+
+.footer main nav {
+/*
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+*/
+
+    a {
+	    display: block;
+        color: $lightbrown;
+        font-size: 13px;
+        line-height: 20px;
+
+        + a {
+            margin-top: 10px;
+        }
+    }
+
+    a:first-child {
+        font-weight: bold;
+        color: #434244;
+        margin-bottom: 2px;
+        letter-spacing: -.24px;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    + nav {
+        margin-top: 1.5rem;
+
+        @include respond( $lg ) {
+            margin-top: 40px;
+        }
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+//! Bottom nav
+// -----------------------------------------------------------------------------
+
+.footer-bottomnav {
+
+    nav a {
+        color: $lightbrown;
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: bold;
+
+        + a {
+            margin-left: 21px;
+        }
+    }
+
+    .social-link + .social-link {
+        margin-left: 12px;
+    }
+
+    @include respond( 570px ) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+//! Bottom nav - mobile
+// -----------------------------------------------------------------------------
+
+@include respond( 570px, "down" ) {
+    .footer-bottomnav nav {
+        display: flex;
+        flex-direction: column;
+
+        a + a {
+            margin-left: 0;
+            margin-top: 10px;
+        }
+    }
+
+    .footer-bottomnav .social-links {
+        margin-top: 10px;
+    }
+}
+
+
+
+// -----------------------------------------------------------------------------
+//! Copyright
+// -----------------------------------------------------------------------------
+
+.footer-copyright {
+    border-top: 1px solid rgba( #434244, .15 );
+    margin-top: 11px;
+    padding-top: 17px;
+    font-size: 12px;
+    line-height: 17px;
+    letter-spacing: -.23px;
+
+    nav {
+        @include respond( 480px, "down" ) {
+            flex: 1 0 100%;
+            order: -1;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.copyright-message {
+    color: rgba( #727275, .75 );
+    padding-right: 32px;
+}
+
+.copyright-nav a {
+    color: $lightbrown;
+
+    + a {
+        margin-left: 21px;
+    }
+}
