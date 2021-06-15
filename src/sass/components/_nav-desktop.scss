@@ -31,7 +31,6 @@
 	}
 }
 
-
 // -----------------------------------------------------------------------------
 //! Items
 // -----------------------------------------------------------------------------
@@ -43,7 +42,7 @@
 		position: relative;
 		display: block;
 		+ li {
-			margin-left: 46px;
+			margin-left: 32px;
 		}
 
 		a {
@@ -58,6 +57,14 @@
 			&:hover {
 				color: $blue;
 			}
+		}
+	}
+}
+
+@media screen and (min-width: 1130px) {
+	.main-nav li {
+		+ li {
+			margin-left: 46px;
 		}
 	}
 }
@@ -166,7 +173,8 @@
 			}
 		}
 
-        &.current-menu-item a {
+        &.current-menu-item a,
+        &.blue-link a {
     		color: $blue;
     	}
 	}

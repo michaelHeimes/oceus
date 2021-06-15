@@ -18,7 +18,7 @@
 	
 
 	<?php if( have_rows('related_products') ): ?>
-		<section class="related">
+		<section class="related"<?php if( $custom_bg = get_field('custom_background_image')):?> style="background-image: url(<?php echo $custom_bg;?>);"<?php endif;?>>
 			<div class="contain">
 				<h2 class="text-center"><?php the_field('related_title'); ?></h2>
 				<div class="related-grid">

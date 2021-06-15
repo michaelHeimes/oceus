@@ -1,33 +1,11 @@
-<?php// if( have_rows('git_blocks') ): ?>
 		<section class="in-touch has-border">
 		    <div class="contain">
 		        <div class="in-touch-title">
-		            <h2><?php //the_field('git_title'); ?>Get In Touch</h2>
+		            <h2>Get In Touch</h2>
 		        </div>
 		        <div class="in-touch-body">
 			        
-			<?php 
-/*
-				while( have_rows('git_blocks') ): the_row(); 
-				$gitTitle = get_sub_field('title');
-				$gitText = get_sub_field('text');
-				$gitImage = get_sub_field('icon');
-				$git_link = get_field( 'link' );
-				$git_link_target = $git_link['target'] ? $git_link['target'] : '_self';
-*/
-			?>
-			
-			<!--
-				<div class="in-touch-item">
-		            <div class="icon">
-		                <?php echo wp_get_attachment_image( $gitImage, 'full' ); ?>
-		            </div>
-		            <div class="body">
-		                <h3><a href="<?php echo $git_link['url']; ?>" target="<?php echo $git_link_target; ?>"><?php echo $gitTitle; ?> <svg width="9" height="16"><use xlink:href="#angle"></use></svg></a></h3>
-		                <p><?php echo $gitText; ?></p>
-		            </div>
-		        </div>
-			-->
+
 			
 			<div class="in-touch-item">
 	            <div class="icon">
@@ -70,9 +48,7 @@
 	        </div>
 
 
-			<?php// endwhile; ?>
 		
 		        </div>
 		    </div>
 		</section>
-	<?php// endif; ?>
