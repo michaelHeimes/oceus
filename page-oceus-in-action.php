@@ -8,6 +8,34 @@
 			<?php the_content(); ?>
 			
 			<div class="action-fade">
+				<h3 class="action-title">Commercial</h3>
+				<p class="action-text">From remote, rural areas to densely populated cities, Oceus Networks’ products and services allow real-time access to critical information in diverse environments.</p>
+				<div class="action-block" id="action-block-C">
+					<div class="action-wrap">
+						<img src="<?php bloginfo('template_url'); ?>/dist/img/action-commercial.jpg" alt="">
+						<div class="poi-mobile" id="poi-mobile-C">
+							<div class="poi" id="poi-mobile-C-1"><div class="poi-dot"></div></div>
+							<div class="poi" id="poi-mobile-C-2"><div class="poi-dot"></div></div>
+							<div class="poi" id="poi-mobile-C-3"><div class="poi-dot"></div></div>
+						</div>
+					</div>
+						
+					<div class="poi poi-desktop" id="poi-C-1">
+						<div class="poi-dot"></div>
+						<div class="poi-tooltip">Xiphos transmits IoT and Sensor data providing real-time analytics on crop health.</div>
+					</div>
+					<div class="poi poi-desktop" id="poi-C-2">
+						<div class="poi-dot"></div>
+						<div class="poi-tooltip">Xiphos connects farm employees and provides real-time data from anywhere on their property through a private 5G system.</div>
+					</div>
+					<div class="poi poi-desktop" id="poi-C-3">
+						<div class="poi-dot"></div>
+						<div class="poi-tooltip">IoT smart agriculture systems utilizes private 5G/4G networks for real-time data to improve crop management and yield.</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="action-fade">
 				<h3 class="action-title">Defense &amp; Intelligence</h3>
 				<p class="action-text">Explore how Oceus’ products and solutions interact in the field. From the desert to the sea, we serve the defense and intelligence community with secure and reliable connectivity.</p>
 
@@ -65,33 +93,6 @@
 	</div>
 					</div>
 					
-				</div>
-			</div>
-			<div class="action-fade">
-				<h3 class="action-title">Commercial</h3>
-				<p class="action-text">From remote, rural areas to densely populated cities, Oceus Networks’ products and services allow real-time access to critical information in diverse environments.</p>
-				<div class="action-block" id="action-block-C">
-					<div class="action-wrap">
-						<img src="<?php bloginfo('template_url'); ?>/dist/img/action-commercial.jpg" alt="">
-						<div class="poi-mobile" id="poi-mobile-C">
-							<div class="poi" id="poi-mobile-C-1"><div class="poi-dot"></div></div>
-							<div class="poi" id="poi-mobile-C-2"><div class="poi-dot"></div></div>
-							<div class="poi" id="poi-mobile-C-3"><div class="poi-dot"></div></div>
-						</div>
-					</div>
-						
-					<div class="poi poi-desktop" id="poi-C-1">
-						<div class="poi-dot"></div>
-						<div class="poi-tooltip">Xiphos transmits IoT and Sensor data providing real-time analytics on crop health.</div>
-					</div>
-					<div class="poi poi-desktop" id="poi-C-2">
-						<div class="poi-dot"></div>
-						<div class="poi-tooltip">Xiphos connects farm employees and provides real-time data from anywhere on their property through a private 5G system.</div>
-					</div>
-					<div class="poi poi-desktop" id="poi-C-3">
-						<div class="poi-dot"></div>
-						<div class="poi-tooltip">IoT smart agriculture systems utilizes private 5G/4G networks for real-time data to improve crop management and yield.</div>
-					</div>
 				</div>
 			</div>
 
