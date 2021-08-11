@@ -7,6 +7,7 @@
 		<div class="contain">
 			<?php the_content(); ?>
 			
+<!--
 			<div class="action-fade">
 				<h3 class="action-title">Commercial</h3>
 				<p class="action-text">From remote, rural areas to densely populated cities, Oceus Networks’ products and services allow real-time access to critical information in diverse environments.</p>
@@ -31,6 +32,42 @@
 					<div class="poi poi-desktop" id="poi-C-3">
 						<div class="poi-dot"></div>
 						<div class="poi-tooltip">IoT smart agriculture systems utilizes private 5G/4G networks for real-time data to improve crop management and yield.</div>
+					</div>
+				</div>
+			</div>
+-->
+
+			<div class="action-fade">
+				<h3 class="action-title">Commercial Markets</h3>
+				<p class="action-text">Oceus Networks delivers scalable wireless 4G/5G networks to support operations for large-device dense and bandwidth-intense environments.</p>
+
+				<div class="action-block" id="action-block-A">
+					<div class="action-wrap">
+						<img src="<?php bloginfo('template_url'); ?>/dist/img/Oceus_in_Action_commercial.jpg" alt="">
+						<div class="poi-mobile" id="poi-mobile-A">
+							<div class="poi" id="poi-mobile-AA-1"><div class="poi-dot"></div></div>
+							<div class="poi" id="poi-mobile-AA-2"><div class="poi-dot"></div></div>
+							<div class="poi" id="poi-mobile-AA-3"><div class="poi-dot"></div></div>
+							<div class="poi" id="poi-mobile-AA-4"><div class="poi-dot"></div></div>
+						</div>
+					</div>
+						
+					<div class="poi poi-desktop" id="poi-AA-1">
+						<div class="poi-dot"></div>
+						<div class="poi-tooltip">Continuous communication, tracking, and control of Automated Ground Vehicles.</div>
+						
+					</div>
+					<div class="poi poi-desktop" id="poi-AA-2">
+						<div class="poi-dot"></div>
+						<div class="poi-tooltip">Connectivity for productive devices including laptops, tablets, 2-way radios, and phones.</div>
+					</div>
+					<div class="poi poi-desktop" id="poi-AA-3">
+						<div class="poi-dot"></div>
+						<div class="poi-tooltip">Tagging, tracking, and metrics of inventory to the sub-pallet level.</div>
+					</div>
+					<div class="poi poi-desktop" id="poi-AA-4">
+						<div class="poi-dot"></div>
+						<div class="poi-tooltip">Real-time monitoring of HVAC systems.</div>
 					</div>
 				</div>
 			</div>
