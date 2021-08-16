@@ -39,7 +39,7 @@
 
 			<div class="action-fade">
 				<h3 class="action-title">Commercial Markets</h3>
-				<p class="action-text">Oceus Networks delivers scalable wireless 4G/5G networks to support operations for large-device dense and bandwidth-intense environments.</p>
+				<p class="action-text">Oceus Networks delivers scalable wireless 5G private cellular network solutions, enabling operators shifting to data-driven operations and requiring enormous device and sensor densities linked to their networks. Oceus. Enabling tomorrow's Industrial Internet of Things and Industry 4.0 today.</p>
 
 				<div class="action-block" id="action-block-A">
 					<div class="action-wrap">
