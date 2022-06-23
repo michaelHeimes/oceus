@@ -1,4 +1,4 @@
-$(document).ready(function() {
+jQuery(document).ready(function($) {
 
 	if($('.action-fade').length){
 		$('.action-fade').waypoint({

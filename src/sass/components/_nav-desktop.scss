@@ -130,10 +130,11 @@
 	.main-nav > li > .sub-menu > li > .sub-menu {
 		display: block;
 		position: relative;
-		margin:0;
-		padding:8px 0 0 0;
+		background-color: $gray;
+	    margin-top: .6rem;
+	    padding: 0.7rem .5rem;
 		li {
-			padding:4px 8px;
+			padding:4px 0;
 			a {
 				font-size:14px;
 				line-height: 16px;

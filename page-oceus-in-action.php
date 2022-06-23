@@ -134,7 +134,7 @@
 			</div>
 
 			<div class="action-fade">
-				<h3 class="action-title">Public Safety</h3>
+				<h3 class="action-title">First Responders</h3>
 				<p class="action-text">Oceus Networks makes reliable communications possible in challenging locations, which is key to first responders’ ability to save lives and ensure public safety.</p>
 				<div class="action-block" id="action-block-D">
 					<div class="action-wrap">

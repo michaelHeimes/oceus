@@ -1,41 +1,15 @@
 <?php get_header();
 while ( have_posts() ) : the_post(); ?>
 
-<?php if( have_rows('slides') ): ?>
 	<div class="home-hero">
-		<div class="slider-element">
-		<?php 
-			while( have_rows('slides') ): the_row(); 
-			$image = get_sub_field('image');
-			$titleOne =  get_sub_field('title_one');
-			$titleTwo =  get_sub_field('title_two');
-			$text =  get_sub_field('text');
-		?>
-			
-			<div class="slide" style="background-image:url(<?php echo wp_get_attachment_image_url( $image, "hero" ); ?>);">
-		        <div class="slide-content">
-		            <h1><strong><?php echo $titleOne; ?></strong> <?php echo $titleTwo; ?></h1>
-		            <p><?php echo $text; ?></p>
-		        </div>
-		    </div>
-		
-		<?php endwhile; ?>
-		</div>
-	    <div class="slide-controls">
-	        <div class="slide-progress">
-	            <div class="slide-progress-current"></div>
-	            <div class="slide-progress-bar"></div>
-	            <div class="slide-progress-last"></div>
-	        </div>
-	        <button type="button" class="btn-left">
-	            <svg width="8" height="15"><use xlink:href="#angle" /></svg>
-	        </button>
-	        <button type="button" class="btn-right">
-	            <svg width="8" height="15"><use xlink:href="#angle" /></svg>
-	        </button>
-	    </div>
+		<div id="fallback-img-wrap" class="bg"></div>
+		<div id="video-wrap" class="bg"></div>
+		<section>
+			<div class="contain text-center">
+				<h1><?php the_field('banner_title'); ?></h1>
+			</div>
+		</section>
 	</div>
-<?php endif; ?>
 
 
 

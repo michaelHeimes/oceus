@@ -22,8 +22,8 @@ gulp.task('styles', function(done) {
         console.log('\n ✖ ✖ ✖ ✖ ✖ ERROR ✖ ✖ ✖ ✖ ✖ \n \n' + error.message + '\n \n');
     })
     .pipe(autoprefixer({
-		browsers: ['> 1%', 'last 2 versions', 'Firefox >= 20']
-	}))
+    browsers: ['> 1%', 'last 2 versions', 'Firefox >= 20']
+  }))
     .pipe(nano())
     .pipe(rename('oceus.min.css'))
     .pipe(sourcemaps.write('.'))

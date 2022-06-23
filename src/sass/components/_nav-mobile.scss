@@ -108,10 +108,19 @@
 		.sub-menu {
 			display: block !important;
 			background: none;
-			padding:8px;
+			padding: 8px 8px 8px 16px;
 			margin: 0;
 			li {
 				line-height: 16px;
+				a {
+					position: relative;
+					
+					&:before {
+						content: '–';
+						margin-right: 4px;
+					}
+					
+				}
 			}
 		}
 		

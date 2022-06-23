@@ -5,21 +5,23 @@
  // -----------------------------------------------------------------------------
 
 
-if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
-
-function my_jquery_enqueue() {
-	wp_deregister_script('jquery');
-	wp_register_script('jquery', "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js", false, null);
-	wp_enqueue_script('jquery');
-}
+// if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
+// 
+// function my_jquery_enqueue() {
+// 	wp_deregister_script('jquery');
+// 	wp_register_script('jquery', "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js", false, null);
+// 	wp_enqueue_script('jquery');
+// }
 
 function oceus_load_scripts() {
 	wp_register_script( 'oceus_scripts', get_template_directory_uri() . '/dist/js/oceus.min.js', array('jquery'), filemtime(get_theme_file_path('/dist/js/oceus.min.js')), true  );
 	$localized = [
 		'themeDir' => get_template_directory_uri(),
 		'siteUrl' => get_site_url(),
+        'home_imgArr' => get_field('fallback_image', ($post->ID)),  
+        'home_bg_vid' => get_field( 'background_video_url', ($post->ID) ),  
 	];
-	wp_localize_script( 'THEMENAME_scripts', 'localized', $localized );
+	wp_localize_script( 'oceus_scripts', 'localized', $localized );
 
 	wp_enqueue_script( 'oceus_scripts' );
 }

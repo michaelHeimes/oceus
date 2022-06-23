@@ -1,8 +1,5 @@
-$(document).ready(function() {
+jQuery(document).ready(function($) {
 
-
-
-	
 	//Featured Products
 	
 	$('.gallery').slick({

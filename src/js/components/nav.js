@@ -1,4 +1,4 @@
-$(document).ready(function() {
+jQuery(document).ready(function($) {
 	
 	$('body').on('click', '.hamburger', function(e) {
 		$( e.delegateTarget ).toggleClass('nav-open');
