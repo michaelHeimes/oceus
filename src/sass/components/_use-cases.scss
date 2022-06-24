@@ -1,0 +1,70 @@
+.use-cases {
+		padding: 32px 16px 40px 16px;
+	
+		@include respond( $md ) {
+			padding: 72px 32px 120px;
+		}
+		
+		a {
+			.img-wrap {
+				position: relative;
+				align-items: center;
+				.mask {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background: linear-gradient(0.77deg, #FAA21F 0.68%, rgba(250, 162, 31, 0) 99.37%);
+					mix-blend-mode: normal;
+					color: #fff;
+					font-weight: 800;
+					font-size: 20px;
+					line-height: 27px;
+					text-align: center;
+					letter-spacing: 0.1em;
+					text-transform: uppercase;
+					opacity: 0;
+					transition: opacity .3s ease;
+				}
+			}
+			
+			&:hover {
+				text-decoration: none;
+				.img-wrap {
+					.mask {
+						opacity: 1;
+					}
+				}
+			}
+		
+		}
+		
+		.img-wrap {
+			margin-bottom: 1.75rem;
+			img {
+				display: block;
+				margin: auto;
+			}
+		}
+		
+		h3 {
+			text-transform: uppercase;
+			margin-bottom: 0.6rem;
+		}
+		
+		p {
+			margin-top: 0;
+		}
+	
+		.contain {
+			 @include respond( $lg, "down" ) {
+				max-width: 660px;
+			}
+		}
+		
+		.col {
+			margin-bottom: 30px;
+		}
+		
+}	

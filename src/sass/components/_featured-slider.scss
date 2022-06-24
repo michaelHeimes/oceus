@@ -97,7 +97,7 @@ $bp-fslide-lg: 860px;
 				top: 0;
 				bottom: 0;
 				right: 100%;
-				background: rgba( $green, .75 );
+				background: $blue;
 			}			
 		}
 		&.slick-active button:before {
@@ -176,4 +176,8 @@ $bp-fslide-lg: 860px;
 
 .featured-slider p + .btn {
     margin-top: 22px;
+}
+
+.home-products-cta {
+	margin-top: 2.9rem;
 }

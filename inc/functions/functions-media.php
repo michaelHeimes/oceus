@@ -10,13 +10,14 @@ add_theme_support('post-thumbnails', array('page','post') );
 //! Image Sizes
 // -----------------------------------------------------------------------------
 	
-	add_image_size( 'block-link', 575, 260, true );
+	add_image_size( 'block-link', 427, 212, true );
 	add_image_size( 'callout', 590, 370, true );
 	add_image_size( 'hero', 1440, 750, true );
 	add_image_size( 'product', 672, 460, true );
 	add_image_size( 'related', 370, 248, true );
 	add_image_size( 'case-study', 590, 370, true );
 	add_image_size( 'gallery', 780, 780, true );
+	add_image_size( 'use-cases', 315, 303, true );
 
 // -----------------------------------------------------------------------------
 //! Use Relative Image Links instead of full path when uploading

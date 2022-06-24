@@ -1,8 +1,10 @@
 
 @include respond( $desktop, "down" ) {
-	.main-nav,
-	.utility-nav {
-		display: none;	
+	.desktop-nav {
+		position: absolute;
+		z-index: -5;
+		transform: translateX(-200%);
+		transform: translateX(-200vh);
 	}
 	
 }
@@ -12,120 +14,158 @@
 //! Nav
 // -----------------------------------------------------------------------------
 
-@include respond( $desktop ) {
+	
+	.desktop-nav {
+		position: absolute;
+		padding-right: 590px;
+		z-index: -1;
+		top: 0;
+		right: 0;
+		visibility: hidden;
+		opacity: 0;
+		transition: .3s ease;
+	}
+	
+	.nav-open .desktop-nav {
+		z-index: 5;
+		opacity: 1;
+		visibility: visible;
+	}
 
-	.masthead .nav {
-		margin: 0;
-		padding-left: 0;
-		-ms-flex: 0 1 auto;
-        flex: 0 0 100%;
-        width:100%;
+	.desktop-nav .nav {
+		position: relative;
+		background: #2068A9;
         display: flex;
-        align-items: center;
-        justify-content: flex-end;
+		flex-direction: column;
         list-style-type: none;
+		padding: 3.5rem 0;
 
         + .nav {
             margin-top: 19px;
         }
 	}
-}
 
 // -----------------------------------------------------------------------------
 //! Items
 // -----------------------------------------------------------------------------
 
-@include respond( $desktop ) {
 
-	.main-nav li {
-		-ms-flex: 0 1 auto;
-		position: relative;
-		display: block;
-		+ li {
-			margin-left: 32px;
-		}
-
-		a {
-			position: relative;
-			display: block;
-			color: $brown;
-			font-size: 18px;
-            line-height: 24px;
-			font-weight: 600;
-			text-decoration: none;
-
+	.desktop-nav .main-nav {
+		> li {
+			background: #2068A9;
+			
+	
+			> a {
+				padding: 1.45rem 5.5rem 1.45rem 2.5rem;
+				position: relative;
+				display: block;
+				color: #fff;
+				font-size: 18px;
+            	line-height: 24px;
+				font-weight: 700;
+				text-transform: uppercase;
+				text-decoration: none;
+	
+				&:hover {
+					color: $orange;
+				}
+			}
+			
 			&:hover {
-				color: $blue;
+				> ul.sub-menu {
+					visibility: visible;
+				}
+			}
+			
+		&:hover,
+		&.current-menu-parent {
+			> a {
+				color: $orange;
 			}
 		}
-	}
-}
-
-@media screen and (min-width: 1130px) {
-	.main-nav li {
-		+ li {
-			margin-left: 46px;
+			
 		}
 	}
-}
-
 
 // -----------------------------------------------------------------------------
 //! Current item state
 // -----------------------------------------------------------------------------
 
-@include respond( $desktop ) {
 
 	.main-nav li.current-menu-item a {
-		color: $blue;
+		color: $orange;
 	}
-}
 
 
 // -----------------------------------------------------------------------------
 //! Sub menus
 // -----------------------------------------------------------------------------
 
-@include respond( $desktop ) {
 	.main-nav > li > .sub-menu {
-		background: #fff;
-		display: none;
-		position: absolute;
-		border:1px solid rgba(71, 72, 72, 0.1);
-		top:100%;
-		left:0;
-		padding:8px 0;
+		visibility: hidden;
+		opacity: 0;
+		// top: 0;
+		// bottom: 0;
+		// right: 0;
+		right: 0;
+		left: 100%;
+		top: 0;
+		//bottom: 0;
+		padding: 54px 0 30px;
 		margin:0;
 		list-style: none;
-		min-width: 200px;
 		z-index: 100;
+		width: 590px;
 		li {
 			display: block;
-			padding:8px 16px;
+			padding: 15px 57px;
 			margin:0;
 		}
-		li a {
-			font-size: 14px;
-			line-height: 16px;
-			display: block;
-			color: $text;
-			&:hover {
-				color: $blue;
-				text-decoration: none;
+		li {
+			a {
+				display: inline-block;
+				font-size: 26px;
+				line-height: 30px;
+				font-weight: 600;
+				color: #fff;
+				padding-top: 3px;
+				span {
+					display: inline-block;
+				position: relative;
+					&:after {
+						content: '';
+						display: block;
+						margin-top: 5px;
+						width: 100%;
+						height: 2px;
+						background-color: transparent;
+					}
+				}
+				&:hover{
+					color: $orange;
+					text-decoration: underline;
+					span:after {
+						background-color: $orange;
+					}
+				}
+			}
+		&.current-menu-item a span {
+			color: $orange;
+			text-decoration: underline;
+			span:after {
+				background-color: $orange;
 			}
 		}
+		}
+		
+	&:first-child {
+		visibility: visible;
+		opacity: 1;
+	}
+		
 	}
 	
-	.main-nav > li.menu-right > .sub-menu {
-		left:auto;
-		right:0;
-		text-align: right;
-		min-width: 0;
-	}
 	
-	.main-nav > li:hover > .sub-menu {
-		display: block;
-	}
 	
 	.main-nav > li > .sub-menu > li > .sub-menu {
 		display: block;
@@ -141,42 +181,3 @@
 			}
 		}
 	}
-
-
-}
-
-
-// -----------------------------------------------------------------------------
-//! Utility nav
-// -----------------------------------------------------------------------------
-
-
-@include respond( $desktop ) {
-	
-	.utility-nav li {
-
-		+ li {
-			margin-left: 21px;
-		}
-
-		a {
-			position: relative;
-			display: block;
-			color: $lightbrown;
-			font-size: 13px;
-            line-height: 18px;
-			font-weight: 600;
-			text-decoration: none;
-            letter-spacing: -0.25px;
-
-			&:hover {
-				color: $blue;
-			}
-		}
-
-        &.current-menu-item a,
-        &.blue-link a {
-    		color: $blue;
-    	}
-	}
-}

@@ -33,7 +33,7 @@ add_action( 'wp_enqueue_scripts', 'oceus_load_scripts' );
 // -----------------------------------------------------------------------------
 
 function oceus_load_styles() {
-    wp_register_style( 'google_fonts', '//fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700&display=swap' );
+    wp_register_style( 'google_fonts', '//fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap' );
 	wp_register_style( 'oceus_styles', get_template_directory_uri() . '/dist/css/oceus.min.css', false, filemtime(get_theme_file_path('/dist/css/oceus.min.css')) );
 
     wp_enqueue_style( 'google_fonts' );

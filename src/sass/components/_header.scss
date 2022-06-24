@@ -1,6 +1,7 @@
 
 
 .masthead {
+	position: relative;
 	padding: 20px $pad-mobile;
 
 	@include respond( $md ) {
@@ -9,6 +10,7 @@
 }
 
 .masthead .contain {
+	position: static;
 	display: flex;
 	align-items: center;
     justify-content: space-between;

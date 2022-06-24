@@ -30,7 +30,32 @@
 		 transform: scale(0);
 		}
 	}
-	@include respond($desktop) {
+	
+	&[arial-controls='desktop-nav'] {
 		display: none;
+		position: relative;
+		z-index: 555;
+		
+		div {
+			width: 40px;
+		}
+		
+		&.is-active {
+			
+			&:before,
+			&:after  {
+				background-color: #fff;
+			}
+		}
+		
+	}
+	
+	@include respond($desktop) {
+		&[arial-controls='mobile-nav'] {
+			display: none;
+		}
+		&[arial-controls='desktop-nav'] {
+			display: block;
+		}
 	}
 }

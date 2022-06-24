@@ -28,26 +28,19 @@
 			<img src="<?php bloginfo('template_url'); ?>/dist/img/oceus.png" alt="Oceus Networks">
 		</a>
 
-        <div class="flex wrap header-right">
-            <?php
-	    			wp_nav_menu( array(
-	    				'theme_location' => 'utility',
-	    				'menu_class' => 'nav utility-nav',
-	    				"title_li" => false,
-	    				"container" => false
-	    			) );
-	    		?>
-	
-	    		<?php
-	    			wp_nav_menu( array(
-	    				'theme_location' => 'header',
-	    				'menu_class' => 'nav main-nav',
-	    				"title_li" => false,
-	    				"container" => false
-	    			) );
-	    		?>
+        <div id="desktop-nav" class="desktop-nav bg-blue">	
+    		<?php
+    			wp_nav_menu( array(
+    				'theme_location' => 'header',
+    				'menu_class' => 'nav main-nav',
+    				"title_li" => false,
+    				"container" => false,
+					'link_before'    => '<span>',
+					'link_after'     => '</span>'
+    			) );
+    		?>
         </div>
-        
+        <button type="button" class="hamburger" aria-label="Menu" arial-controls="desktop-nav"><div></div></button>
         <button type="button" class="hamburger" aria-label="Menu" arial-controls="mobile-nav"><div></div></button>
         <div class="mobile-nav" id="mobile-nav">
 			<div class="mobile-nav-inner">

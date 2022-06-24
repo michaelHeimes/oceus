@@ -137,6 +137,21 @@
                     "mime_types": ""
                 }
             ]
+        },
+        {
+            "key": "field_62b460a2e0ba3",
+            "label": "Button Link",
+            "name": "button_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         }
     ],
     "location": [
@@ -157,5 +172,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1655947482
+    "modified": 1655988397
 }
