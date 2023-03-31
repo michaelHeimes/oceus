@@ -25,7 +25,7 @@
 	<div class="contain wide">
 
 		<a href="<?php bloginfo( 'url' ); ?>" class="logo">
-			<img src="<?php bloginfo('template_url'); ?>/dist/img/oceus.png" alt="Oceus Networks">
+			<img src="<?php bloginfo('template_url'); ?>/dist/img/oceus.png" alt="Oceus">
 		</a>
 
         <div id="desktop-nav" class="desktop-nav bg-blue">	

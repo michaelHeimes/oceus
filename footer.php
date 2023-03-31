@@ -74,7 +74,7 @@
         </div>
 
         <div class="footer-copyright flex wrap">
-            <span class="copyright-message">Copyright &copy; <?php echo Date('Y'); ?> Oceus Networks</span>
+            <span class="copyright-message">Copyright &copy; <?php echo Date('Y'); ?> Oceus</span>
             <nav class="copyright-nav">
                 <a href="/about/legal">Legal</a>
                 <a href="/privacy">Privacy</a>

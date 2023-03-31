@@ -10,7 +10,7 @@
 <!--
 			<div class="action-fade">
 				<h3 class="action-title">Commercial</h3>
-				<p class="action-text">From remote, rural areas to densely populated cities, Oceus Networks’ products and services allow real-time access to critical information in diverse environments.</p>
+				<p class="action-text">From remote, rural areas to densely populated cities, Oceus’ products and services allow real-time access to critical information in diverse environments.</p>
 				<div class="action-block" id="action-block-C">
 					<div class="action-wrap">
 						<img src="<?php bloginfo('template_url'); ?>/dist/img/action-commercial.jpg" alt="">
@@ -39,7 +39,7 @@
 
 			<div class="action-fade">
 				<h3 class="action-title">Commercial Markets</h3>
-				<p class="action-text">Oceus Networks delivers scalable wireless 5G private cellular network solutions, enabling operators shifting to data-driven operations and requiring enormous device and sensor densities linked to their networks. Oceus. Enabling tomorrow's Industrial Internet of Things and Industry 4.0 today.</p>
+				<p class="action-text">Oceus delivers scalable wireless 5G private cellular network solutions, enabling operators shifting to data-driven operations and requiring enormous device and sensor densities linked to their networks. Oceus. Enabling tomorrow's Industrial Internet of Things and Industry 4.0 today.</p>
 
 				<div class="action-block" id="action-block-A">
 					<div class="action-wrap">
@@ -135,7 +135,7 @@
 
 			<div class="action-fade">
 				<h3 class="action-title">First Responders</h3>
-				<p class="action-text">Oceus Networks makes reliable communications possible in challenging locations, which is key to first responders’ ability to save lives and ensure public safety.</p>
+				<p class="action-text">Oceus makes reliable communications possible in challenging locations, which is key to first responders’ ability to save lives and ensure public safety.</p>
 				<div class="action-block" id="action-block-D">
 					<div class="action-wrap">
 						<img src="<?php bloginfo('template_url'); ?>/dist/img/action-safety.jpg" alt="">
