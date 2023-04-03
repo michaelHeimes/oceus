@@ -25,10 +25,19 @@
 	<div class="contain wide">
 
 		<a href="<?php bloginfo( 'url' ); ?>" class="logo">
-			<img src="<?php bloginfo('template_url'); ?>/dist/img/oceus.png" alt="Oceus">
+			<img src="<?php bloginfo('template_url'); ?>/dist/img/oceus-logo.png" alt="Oceus">
 		</a>
 
         <div id="desktop-nav" class="desktop-nav bg-blue">	
+			<?php
+				wp_nav_menu( array(
+					'theme_location' => 'utility',
+					'menu_class' => 'nav utility-nav',
+					"title_li" => false,
+					"container" => false
+				) );
+			?>
+			
     		<?php
     			wp_nav_menu( array(
     				'theme_location' => 'header',
